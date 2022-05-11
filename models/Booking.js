@@ -7,6 +7,15 @@ const bookingSchema = new mongoose.Schema({
     ref: "Customer",
     required: true,
   },
+  locationId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Parkingslot",
+    required: true,
+  },
+  vehicleType: {
+    type: String,
+    required: true
+  },
   vehicleNo: {
     type: String,
     required: true,
